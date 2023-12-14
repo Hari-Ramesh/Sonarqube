@@ -5,7 +5,12 @@ Docker and docker-compose installed and docker service running
 
 Install Sonarqube using the docker-composefile
 docker-compose up -d 
+Once SonarQube & postgres container up then create volume using below commands 
+##
+sudo mkdir -p /opt/sonarqube/conf /opt/sonarqube/data /opt/sonarqube/extensions /opt/sonarqube/lib/bundled-plugins /opt/sonarqube/logs /var/lib/postgresql /var/lib/postgresql/data
 
+sudo chmod 777 /opt/sonarqube/conf /opt/sonarqube/data /opt/sonarqube/extensions /opt/sonarqube/lib/bundled-plugins /opt/sonarqube/logs /var/lib/postgresql /var/lib/postgresql/data
+##
 Once Sonarqube is up and running can be accessed using URL : http://<<IP address>>:9000
 Default username and password : admin:admin
 
@@ -45,7 +50,7 @@ In the Maven based application build pom.xml add the following under build manag
 
   
 add a build step Execute SonarQube  Scanner and add the below in additonal properties field
-  sonar.host.url=URL
+sonar.host.url=URL
 sonar.login=Personal Access token
 sonar.projectKey=Project Key
 sonar.java.binaries=PATH where Java compiled files are present
