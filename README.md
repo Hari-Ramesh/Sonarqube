@@ -5,8 +5,9 @@ Docker and docker-compose installed and docker service running
 
 Install Sonarqube using the docker-composefile
 docker-compose up -d 
-Once SonarQube & postgres container up then create volume using below commands 
 ##
+Once SonarQube & postgres container up then create volume using below commands
+
 sudo mkdir -p /opt/sonarqube/conf /opt/sonarqube/data /opt/sonarqube/extensions /opt/sonarqube/lib/bundled-plugins /opt/sonarqube/logs /var/lib/postgresql /var/lib/postgresql/data
 
 sudo chmod 777 /opt/sonarqube/conf /opt/sonarqube/data /opt/sonarqube/extensions /opt/sonarqube/lib/bundled-plugins /opt/sonarqube/logs /var/lib/postgresql /var/lib/postgresql/data
