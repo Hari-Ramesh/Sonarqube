@@ -2,9 +2,9 @@
 #updating amazon linux patches
 sudo yum update -y
 #installing docker engine
-#sudo amazon-linux-extras install docker -y
+sudo amazon-linux-extras install docker -y
 #installing docker engine for amazon-linux 2023
-sudo yum install -y docker
+#sudo yum install -y docker
 #starting docker service
 sudo service docker start
 #Adding user ec2-user to docker group
